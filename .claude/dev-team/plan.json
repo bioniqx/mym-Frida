@@ -1,0 +1,354 @@
+{
+ "request": "Execute frida_plan/plans/2026-09-07-frida-agent-whitebox-hardening.md T01-T10 with the session decisions (pin cd41bdbf, fork deferred, Tigress gate deferred)",
+ "profile": "balanced",
+ "glm": {
+  "tier": "api"
+ },
+ "commands": {
+  "build": "make",
+  "test": "make",
+  "test_file": "python3 {files}",
+  "lint": "none",
+  "lint_file": "none",
+  "typecheck": "none",
+  "typecheck_file": "none"
+ },
+ "contracts": [
+  "C1 roundtrip API: tools/harness/roundtrip.py exposes compile(source_path)->bytes and run(bytecode)->str (S2; consumed by S4/S6/S7x/S8)",
+  "C2 FPB1 container: b'FPB1' || nonce(12) || AES-256-GCM ciphertext+tag(16) (S7 produces, S8 consumes)",
+  "C3 encrypt_blob(plain: bytes, key: bytes)->bytes and decrypt_blob(container, key)->bytes, 32-byte key (S7)",
+  "C4 native entry int gum_prot_native_entry(const char *op, const char *arg, char *out, size_t out_len) and JS global ProtNative.call(op, arg)->string (S9, consumed by S10)",
+  "C5 verify_disasm.sh env contract: ROUNDTRIP / STOCK_READER / SAMPLE_AGENT overridable (S6)",
+  "C6 tools/protect/frida_env.sh exports PYTHONPATH making the worktree's built frida importable (S1; consumed by S2/S4/S5/S6/S7x/S8)"
+ ],
+ "notes": "Authoritative task bodies with verbatim code: /Users/ethan/Documents/GitHub/frida/frida_plan/plans/2026-09-07-frida-agent-whitebox-hardening.md (read your task section FIRST; follow its steps in order; paste its Expected outputs as evidence). Worktree bootstrap: python3 tools/ensure-submodules.py (all submodules; several GB, background), then ./configure -Dfrida_python=enabled && make (20-60 min, background). Representative tests: tools/protect/test_scan_blob.py (plain python3, prints ALL TESTS PASSED). Gitlink slices (S8/S9/S10): footprint subprojects/frida-gum means the frida-gum submodule pointer; real edits happen in the worktree's nested clone; commit inside it with the plan's message, push HEAD to refs/heads/devteam-<SID> of /Users/ethan/Documents/GitHub/frida/subprojects/frida-gum, then commit-work at top level. Gum slice bases recording a non-upstream frida-gum sha: after ensure-submodules, git -C subprojects/frida-gum fetch /Users/ethan/Documents/GitHub/frida/subprojects/frida-gum devteam-S9 (or the named branch) and checkout the recorded sha. Root .gitignore is owned by S3 (adds tools/protect/node_modules/, tools/protect/.seed, tools/protect/.key up front); S5 must not touch it.",
+ "test_globs": [
+  "tools/protect/test_*.py"
+ ],
+ "slices": [
+  {
+   "id": "S1",
+   "title": "Custom Frida build bring-up (T01, local)",
+   "goal": "Reproducible custom Frida build from the current wrap pin (frida-forks/quickjs @ cd41bdbf), frida_python enabled, importable built module; documented in tools/protect/README.md; fork step deferred.",
+   "kind": "chore",
+   "size": "large",
+   "deps": [],
+   "files": [
+    "tools/protect/README.md",
+    "tools/protect/frida_env.sh"
+   ],
+   "risk": "low",
+   "isolation": false,
+   "criteria": [
+    "configure -Dfrida_python=enabled and make exit 0 in the worktree (tail pasted)",
+    "git -C subprojects/frida-gum/subprojects/quickjs rev-parse HEAD prints cd41bdbf0c6c14a22f4a514bfe8efd6cbca50af3 fetched from the existing wrap",
+    "python3 -c 'import frida' succeeds after . tools/protect/frida_env.sh",
+    "README documents build commands, the pin, the deferred fork repoint step, and PYTHONPATH usage"
+   ],
+   "edge_cases": [
+    "frida_env.sh must compute its path from BASH_SOURCE so it works from any cwd/worktree"
+   ],
+   "context": [
+    "Plan task T01. ADAPTATIONS: skip Steps 1-3 and 5-7 (fork create/push/repoint/wrap rewrite + submodule commit) - owner deferred the fork; instead VERIFY the existing wrap (Step 4 replaced: url must be https://github.com/frida-forks/quickjs.git, revision cd41bdbf0c6c14a22f4a514bfe8efd6cbca50af3). Create tools/protect/frida_env.sh (path-relative) exporting PYTHONPATH to the directory containing the built frida package (discover under build/ after make; verify import). README: build steps, expected artifacts, QuickJS pin verification, plus a 'Deferred: GitHub fork' note describing the one-line wrap repoint for later. Worktree bootstrap: python3 tools/ensure-submodules.py (background, full), then ./configure -Dfrida_python=enabled && make (background)."
+   ],
+   "verify": "sh -c '. tools/protect/frida_env.sh && python3 -c \"import frida; print(frida.__file__)\"'"
+  },
+  {
+   "id": "S2",
+   "title": "Bytecode round-trip harness + sample agent (T02)",
+   "goal": "roundtrip.py compile()/run() via the frida Python bindings; CLI exits 0 printing ROUNDTRIP_OK on the sample agent.",
+   "kind": "chore",
+   "size": "small",
+   "deps": [
+    "S1"
+   ],
+   "files": [
+    "tools/harness/sample_agent.js",
+    "tools/harness/roundtrip.py"
+   ],
+   "risk": "low",
+   "isolation": false,
+   "criteria": [
+    "RED shown first: stub compile() raises NotImplementedError when run (plan Step 2 evidence)",
+    "GREEN: roundtrip.py CLI prints ROUNDTRIP_OK and exits 0",
+    "compile returns bytes containing the QuickJS bytecode magic first byte"
+   ],
+   "edge_cases": [
+    "message timeout surfaces a clear error",
+    "dummy process always killed (finally)"
+   ],
+   "context": [
+    "Plan task T02. Copy sample_agent.js and roundtrip.py verbatim from the plan. Run gates with . tools/protect/frida_env.sh first. Worktree build already exists from S1 merge only in MAIN - your own worktree still needs full bootstrap (ensure-submodules + configure + make, background)."
+   ],
+   "verify": "sh -c '. tools/protect/frida_env.sh && python3 tools/harness/roundtrip.py tools/harness/sample_agent.js'"
+  },
+  {
+   "id": "S3",
+   "title": "JS-source obfuscation CLI (T03, L4)",
+   "goal": "node tools/protect/obfuscate.mjs <in.js> <out.js> producing renamed-identifier + string-array-encrypted JS; test.sh passes (ROUNDTRIP_OK absent from output, node --check clean).",
+   "kind": "chore",
+   "size": "small",
+   "deps": [
+    "S2"
+   ],
+   "files": [
+    "tools/protect/obfuscate.mjs",
+    "tools/protect/package.json",
+    "tools/protect/package-lock.json",
+    "tools/protect/test.sh",
+    ".gitignore"
+   ],
+   "risk": "low",
+   "isolation": false,
+   "criteria": [
+    "RED shown first: test.sh fails with Cannot find module obfuscate.mjs (plan Step 2)",
+    "GREEN: sh tools/protect/test.sh prints PASS exit 0",
+    ".gitignore gains tools/protect/node_modules/, tools/protect/.seed, tools/protect/.key (front-loaded for S5/S7)",
+    "package-lock.json committed (node_modules never)"
+   ],
+   "edge_cases": [
+    "obfuscator must never rename Frida globals (renameGlobals false per plan)"
+   ],
+   "context": [
+    "Plan task T03, verbatim files. ORDER: 1) append the three ignore lines to .gitignore FIRST, 2) cd tools/protect && npm install (plan-pinned; creates node_modules + lockfile), 3) write files, 4) sh tools/protect/test.sh, 5) commit-work. Host node/npm installed by conductor. No Frida build needed in this worktree."
+   ],
+   "verify": "sh tools/protect/test.sh"
+  },
+  {
+   "id": "S4",
+   "title": "Blob leak-scanner + Phase-1a gate (T04, L4)",
+   "goal": "scan_blob.py CLI exits 1 listing LEAKED tokens (UTF-8 + UTF-16LE) and 0 CLEAN; gate demonstrates obfuscated blob clean vs plain blob leaking ROUNDTRIP_OK.",
+   "kind": "code",
+   "size": "small",
+   "deps": [
+    "S3"
+   ],
+   "files": [
+    "tools/protect/scan_blob.py",
+    "tools/protect/test_scan_blob.py"
+   ],
+   "risk": "low",
+   "isolation": false,
+   "criteria": [
+    "RED: test_scan_blob.py fails before implementation (exit!=1 assertions)",
+    "GREEN: python3 tools/protect/test_scan_blob.py prints ALL TESTS PASSED",
+    "Gate evidence: scan of obfuscated-sample blob CLEAN for LOCAL_NAME + ROUNDTRIP_OK; scan of plain blob LEAKED: ROUNDTRIP_OK (plan Steps 5-10)"
+   ],
+   "edge_cases": [
+    "token present as UTF-16LE is detected",
+    "clean blob exits 0"
+   ],
+   "context": [
+    "Plan task T04, verbatim files. Gate steps 5-10 need node obfuscation + roundtrip.compile against YOUR worktree build: full bootstrap (ensure-submodules + configure + make, background) and npm ci in tools/protect. Use a sample_agent.js containing a local let variable if the current one lacks one (plan Step 5 fallback)."
+   ],
+   "verify": "python3 tools/protect/test_scan_blob.py"
+  },
+  {
+   "id": "S5",
+   "title": "QuickJS opcode permutation tool (T05, L3)",
+   "goal": "opcode_permute.py deterministically permutes the safe DEF(...) subset (constrained opcodes pinned, SHORT_OPCODES region held by position); applied to the worktree fork checkout, custom build rebuilt, round-trip still GREEN.",
+   "kind": "chore",
+   "size": "large",
+   "deps": [
+    "S2"
+   ],
+   "files": [
+    "tools/protect/opcode_permute.py"
+   ],
+   "risk": "high",
+   "isolation": false,
+   "criteria": [
+    "self-test passes (bijection, pinned slots, determinism, seed sensitivity)",
+    "CONSTRAINED_OPCODES re-derived from the ACTUAL fork checkout at cd41bdbf: grep -nE 'OP_[a-z0-9_]+ *[-+]' quickjs.c and range comparisons (plan Steps 3-4, 10); plan's starter list extended with every name found",
+    "Applied run prints permuted N opcodes, M moved, K held fixed; bijection diff empty; constrained check prints no MOVED (Steps 12-14)",
+    "Rebuilt make exit 0 AND roundtrip.py prints ROUNDTRIP_OK on the permuted build (Step 16 HARD gate)",
+    ".seed generated locally, never committed; permuted quickjs-opcode.h not committed (build artifact)"
+   ],
+   "edge_cases": [
+    "re-running with a different seed must not permute an already-permuted file (.canonical regeneration)",
+    "SHORT_OPCODES ifdef region stays fixed by position"
+   ],
+   "context": [
+    "Plan task T05, verbatim script skeleton + implementations. Do NOT touch .gitignore (S3 already added the .seed line). Fork checkout path in your worktree: subprojects/frida-gum/subprojects/quickjs (exists after configure fetches the wrap). Full worktree bootstrap + build required; rebuild after applying the permutation. QUICKJS_DIR=subprojects/frida-gum/subprojects/quickjs."
+   ],
+   "verify": "python3 tools/protect/opcode_permute.py --self-test"
+  },
+  {
+   "id": "S6",
+   "title": "Stock-disassembler-fails gate (T06, L3)",
+   "goal": "verify_disasm.sh proves a stock QuickJS reader PARSE_FAILs the permuted blob while the custom Frida runs it (ROUNDTRIP_OK) and a control blob PARSE_OKs.",
+   "kind": "chore",
+   "size": "small",
+   "deps": [
+    "S5"
+   ],
+   "files": [
+    "tools/protect/stock_reader.c",
+    "tools/protect/verify_disasm.sh",
+    "tools/protect/roundtrip.sh"
+   ],
+   "risk": "low",
+   "isolation": false,
+   "criteria": [
+    "stock QuickJS cloned at the bellard commit MATCHING the fork pin version (read the version from subprojects/frida-gum/subprojects/quickjs; plan's 3f81070e is for 2024-01-13 and may be stale - record the chosen commit in the report)",
+    "libquickjs.bignum.a builds; stock_reader compiles (macOS clang, no -ldl) and control run prints PARSED_OK",
+    "verify_disasm.sh ends with L3 GATE PASSED (4 checks) in your worktree with its own permuted build",
+    "roundtrip.sh adapter implements compile <src> <out.bin> and run <blob> over tools/harness/roundtrip.py and is what verify_disasm.sh calls via ROUNDTRIP env"
+   ],
+   "edge_cases": [
+    "control blob proves the reader itself works (guard against a broken-reader false pass)"
+   ],
+   "context": [
+    "Plan task T06. Adaptation: create tools/protect/roundtrip.sh (thin sh adapter calling python3 roundtrip.py functions: compile writes bytes to out path; run prints marker) because verify_disasm.sh expects subcommands. Worktree: full bootstrap, apply S5 permutation with a FRESH seed (tools/protect/opcode_permute.py), configure, make. Stock tree at /tmp/stock-quickjs (shared path, persists for the engine re-run). Run the gate with STOCK_READER/ROUNDTRIP/SAMPLE_AGENT env per the verify line."
+   ],
+   "verify": "sh -c 'STOCK_READER=/tmp/stock-quickjs/stock_reader ROUNDTRIP=tools/protect/roundtrip.sh SAMPLE_AGENT=tools/harness/sample_agent.js sh tools/protect/verify_disasm.sh'"
+  },
+  {
+   "id": "S7",
+   "title": "AEAD encrypt_blob (T07 part 1)",
+   "goal": "encrypt_blob/decrypt_blob implement the FPB1 container (AES-256-GCM, 12-byte nonce) per contract C2/C3; unit tests pass.",
+   "kind": "code",
+   "size": "small",
+   "deps": [],
+   "files": [
+    "tools/protect/encrypt_blob.py",
+    "tools/protect/test_encrypt_blob.py"
+   ],
+   "risk": "low",
+   "isolation": false,
+   "criteria": [
+    "RED: ModuleNotFoundError before implementation",
+    "GREEN: python3 tools/protect/test_encrypt_blob.py prints OK",
+    "round-trip and wrong-key tests both hold (plan Step 1 tests)"
+   ],
+   "edge_cases": [
+    "non-32-byte key rejected",
+    "bad magic rejected on decrypt"
+   ],
+   "context": [
+    "Plan task T07 Steps 1-4 only. Verbatim files. cryptography package is host-installed. No build, no node needed in this worktree."
+   ],
+   "verify": "python3 tools/protect/test_encrypt_blob.py"
+  },
+  {
+   "id": "S7X",
+   "title": "build_protected orchestrator (T07 part 2)",
+   "goal": "build_protected.py <agent.js> <out.fpb> chains obfuscate -> compile -> encrypt using FPB_KEY_FILE; test prints OK.",
+   "kind": "code",
+   "size": "small",
+   "deps": [
+    "S7",
+    "S3",
+    "S2"
+   ],
+   "files": [
+    "tools/protect/build_protected.py",
+    "tools/protect/test_build_protected.py"
+   ],
+   "risk": "low",
+   "isolation": false,
+   "criteria": [
+    "RED: subprocess non-zero before implementation",
+    "GREEN: python3 tools/protect/test_build_protected.py prints OK (produces FPB1-prefixed artifact)",
+    "output container starts with b'FPB1'"
+   ],
+   "edge_cases": [
+    "missing FPB_KEY_FILE exits 1 with clear error",
+    "key file not 32 bytes exits 1"
+   ],
+   "context": [
+    "Plan task T07 Steps 5-8, verbatim. Worktree needs: npm ci in tools/protect (lockfile from S3) AND full bootstrap + build (roundtrip.compile spawns via the built frida). Source frida_env.sh for gates. Do NOT generate .key at a tracked path; test uses its own temp key."
+   ],
+   "verify": "python3 tools/protect/test_build_protected.py"
+  },
+  {
+   "id": "S9",
+   "title": "Native-core skeleton + ProtNative glue (T09, L1 scaffolding)",
+   "goal": "gum_prot_native_entry compiled into the frida-gum library, ProtNative.call global registered, gum-tests ping/pong case OK.",
+   "kind": "chore",
+   "size": "large",
+   "deps": [
+    "S1"
+   ],
+   "files": [
+    "subprojects/frida-gum"
+   ],
+   "risk": "high",
+   "isolation": false,
+   "criteria": [
+    "all T09 files created/edited per plan (lib/prot/native_core.{h,c}, lib/prot/meson.build, meson.build include+subdir, gum/meson.build source fold, gumquickcore.c glue, tests/gumjs/script.c case)",
+    "./build/tests/gum-tests /GumJS/Script/prot_native_ping_returns_pong#QJS prints OK exit 0",
+    "inner submodule commit made with plan message; pushed to refs/heads/devteam-S9 of the main nested repo; top-level gitlink committed via commit-work"
+   ],
+   "edge_cases": [
+    "anchor drift: verify every python anchor block exists (grep) before running the plan's patch scripts; adapt anchors to current file content if the tree moved"
+   ],
+   "context": [
+    "Plan task T09. Run inside subprojects/frida-gum after full top-level ensure-submodules in YOUR worktree. Anchor scripts from the plan are python3 heredocs - run them from the frida-gum dir. Build: ./configure --enable-gumpp --enable-gumjs --enable-tests && make INSIDE subprojects/frida-gum (its own build dir, gitignored). GITLINK PROTOCOL (notes section): inner commit, push to /Users/ethan/Documents/GitHub/frida/subprojects/frida-gum HEAD:refs/heads/devteam-S9, then commit-work at top (footprint subprojects/frida-gum)."
+   ],
+   "verify": "sh -c 'cd subprojects/frida-gum && ./build/tests/gum-tests /GumJS/Script/prot_native_ping_returns_pong#QJS'"
+  },
+  {
+   "id": "S8",
+   "title": "GumJS decrypt-before-read hook (T08, L3)",
+   "goal": "FPB1 containers are detected and decrypted in memory before JS_ReadObject on both load paths; e2e gates pass (ROUNDTRIP_OK, NO_PLAINTEXT_ON_DISK, wrong-key fails).",
+   "kind": "chore",
+   "size": "large",
+   "deps": [
+    "S7X",
+    "S9"
+   ],
+   "files": [
+    "subprojects/frida-gum"
+   ],
+   "risk": "high",
+   "isolation": false,
+   "criteria": [
+    "vendored AES-256-GCM decryptor + FPB1 hook land per plan (gumprotaesgcm.{h,c}, lib/prot/.gitignore, gumquickscriptbackend.c both load paths, gumjs meson.build)",
+    "e2e: build_protected -> run prints ROUNDTRIP_OK (plan Step 12)",
+    "NO_PLAINTEXT_ON_DISK (Step 13)",
+    "wrong-key build prints DECRYPT_FAILED_AS_EXPECTED then restored build prints ROUNDTRIP_OK again (Steps 14-15)",
+    "inner submodule commit with plan message; pushed to devteam-S8; top-level gitlink via commit-work; gumprotkey.h never staged"
+   ],
+   "edge_cases": [
+    "container smaller than header+tag returns NULL (falls through to normal paths)",
+    "non-FPB1 bytecode still loads unchanged (backwards compat path intact)"
+   ],
+   "context": [
+    "Plan task T08. VERIFY ANCHORS FIRST (line numbers like 659 may drift; grep the quoted blocks). Your worktree frida-gum base records S9's sha: after ensure-submodules, if checkout of that sha fails, fetch devteam-S9 from /Users/ethan/Documents/GitHub/frida/subprojects/frida-gum (see notes). Generate worktree-local tools/protect/.key (32 bytes, untracked), derive gumprotkey.h from it, full top-level build, run gates with frida_env.sh + FPB_KEY_FILE. GITLINK PROTOCOL as in notes, branch devteam-S8."
+   ],
+   "verify": "sh -c '. tools/protect/frida_env.sh && export FPB_KEY_FILE=$PWD/tools/protect/.key && python3 tools/protect/build_protected.py tools/harness/sample_agent.js /tmp/agent_s8.fpb && python3 -c \"import sys; sys.path.insert(0, \\\"tools/protect\\\"); sys.path.insert(0, \\\"tools/harness\\\"); import roundtrip; print(roundtrip.run(open(\\\"/tmp/agent_s8.fpb\\\", \\\"rb\\\").read()))\"'"
+  },
+  {
+   "id": "S10",
+   "title": "Tigress wiring, gate deferred (T10)",
+   "goal": "prot_obfuscate build option + custom_target wiring + obfuscate_native.py with verified missing-Tigress error path; default build unaffected.",
+   "kind": "chore",
+   "size": "small",
+   "deps": [
+    "S9",
+    "S8"
+   ],
+   "files": [
+    "tools/protect/obfuscate_native.py",
+    "subprojects/frida-gum"
+   ],
+   "risk": "low",
+   "isolation": false,
+   "criteria": [
+    "obfuscate_native.py runs, exits non-zero with the 'not found on PATH' message and no traceback (plan Step 2)",
+    "meson.options gains prot_obfuscate (default false); lib/prot/meson.build compiles native_core.obf.c only when true (plan Step 4)",
+    "default build (option false) unaffected: configure + make exit 0 in the worktree",
+    "Tigress functional gates (plan Steps 5-7) explicitly DEFERRED - listed as not run in the report",
+    "inner commit pushed to devteam-S10; top-level script + gitlink committed"
+   ],
+   "edge_cases": [
+    "unknown OS/arch mapping exits with the named error"
+   ],
+   "context": [
+    "Plan task T10 with owner-deferred Tigress gate (Steps 5-7 skipped, say so in the report). GITLINK PROTOCOL as in notes, branch devteam-S10; base records S8's sha (fetch devteam-S8 from the main nested repo if checkout fails). Worktree needs ensure-submodules + configure + make (default option) to prove the build stays green."
+   ],
+   "verify": "sh -c 'tools/protect/obfuscate_native.py subprojects/frida-gum/lib/prot/native_core.c /tmp/native_core_obf_test.c 2>&1 | grep -q \"not found on PATH\"'"
+  }
+ ]
+}

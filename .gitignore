@@ -1,0 +1,9 @@
+/build/
+/deps/
+/releng/__pycache__/
+/releng/modules/frida-gadget-ios/*.dylib
+/releng/modules/frida-gadget-ios/node_modules
+/subprojects/*
+/tools/protect/node_modules/
+/tools/protect/.seed
+/tools/protect/.key

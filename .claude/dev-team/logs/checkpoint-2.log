@@ -1,0 +1,497 @@
+[1/436] Copying file subprojects/frida-core/src/zymbiote-x86_64.elf
+[2/436] Copying file subprojects/frida-core/src/zymbiote-arm.elf
+[3/436] Copying file subprojects/frida-core/src/zymbiote-x86.elf
+[4/436] Copying file subprojects/frida-core/src/zymbiote-arm64.elf
+[5/436] Generating subprojects/frida-gum/bindings/gumjs/gumjs-generated-bindings with a custom command
+[6/436] Generating subprojects/frida-gum/gum/gum-cmodule-runtime with a custom command
+[7/436] Copying file subprojects/frida-core/src/api/GLib-2.0.gir
+[8/436] Copying file subprojects/frida-core/src/api/GObject-2.0.gir
+[9/436] Copying file subprojects/frida-core/src/api/Gio-2.0.gir
+[10/436] Compiling C object subprojects/frida-gum/bindings/gumjs/quickcompile.p/gumquickcompile.c.o
+[11/436] Linking target subprojects/frida-gum/bindings/gumjs/quickcompile
+[12/436] Compiling Vala source ../subprojects/frida-core/tools/resource-compiler.vala
+[13/436] Generating GObject enum file subprojects/frida-gum/gum/gumenumtypes.h (wrapped by meson to capture output)
+[14/436] Compiling Vala source ../subprojects/efni/src/error.vala ../subprojects/efni/src/promise.vala ../subprojects/efni/src/buffer.vala ../subprojects/efni/src/value.vala ../subprojects/efni/src/stream.vala ../subprojects/efni/src/socket.vala ../subprojects/efni/src/fs.vala ../subprojects/efni/src/marshal.vala ../subprojects/efni/src/numeric.vala ../subprojects/efni/src/debugger.vala ../subprojects/efni/src/gdb.vala ../subprojects/efni/src/xpc.vala
+../subprojects/efni/src/marshal.vala:6:33-6:52: warning: `GLib.Type.class_ref' has been deprecated since 2.84
+    6 | 		EnumClass klass = (EnumClass) typeof (T).class_ref ();
+      | 		                              ^~~~~~~~~~~~~~~~~~~~    
+../subprojects/efni/src/marshal.vala:18:33-18:52: warning: `GLib.Type.class_ref' has been deprecated since 2.84
+   18 | 		EnumClass klass = (EnumClass) typeof (T).class_ref ();
+      | 		                              ^~~~~~~~~~~~~~~~~~~~    
+Compilation succeeded - 2 warning(s)
+[15/436] Generating GObject enum file subprojects/frida-gum/gum/gumenumtypes.c (wrapped by meson to capture output)
+[16/436] Generating subprojects/frida-gum/bindings/gumjs/gumjs-runtime with a custom command
+[17/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/meson-generated_.._gumenumtypes.c.o
+[18/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/gumapiresolver.c.o
+[19/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/gum.c.o
+[20/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/gumbacktracer.c.o
+[21/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/gumcloak.c.o
+[22/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/gumcontrolflowgraph.c.o
+[23/436] Compiling Vala source ../subprojects/frida-core/lib/base/asset-location.vala ../subprojects/frida-core/lib/base/promise.vala ../subprojects/frida-core/lib/base/session.vala ../subprojects/frida-core/lib/base/channel.vala ../subprojects/frida-core/lib/base/service.vala ../subprojects/frida-core/lib/base/rpc.vala ../subprojects/frida-core/lib/base/p2p.vala ../subprojects/frida-core/lib/base/dbus.vala ../subprojects/frida-core/lib/base/socket.vala ../subprojects/frida-core/lib/base/xnu-syscalls/xnu-syscalls.vala ../subprojects/frida-core/lib/base/posix.vala ../subprojects/frida-core/lib/base/corefoundation.vala subprojects/efni/src/efni-1.0.vapi
+[24/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/gumcodesegment.c.o
+[25/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/gumcodeallocator.c.o
+[26/436] Generating subprojects/frida-core/src/darwin/agent/reportcrash/reportcrash.js with a custom command
+[27/436] Compiling Vala source ../subprojects/frida-core/lib/pipe/pipe.vala subprojects/frida-core/lib/base/frida-base-1.0.vapi subprojects/efni/src/efni-1.0.vapi
+[28/436] Generating subprojects/frida-core/src/darwin/agent/osanalytics/osanalytics.js with a custom command
+[29/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/gumelfmoduleresolver.c.o
+[30/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/gumexceptor.c.o
+[31/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/gumunwindbroker.c.o
+[32/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/gumeventsink.c.o
+[33/436] Compiling Vala source ../subprojects/frida-core/lib/payload/process.vala ../subprojects/frida-core/lib/payload/base-agent-session.vala ../subprojects/frida-core/lib/payload/script-engine.vala ../subprojects/frida-core/lib/payload/portal-client.vala ../subprojects/frida-core/lib/payload/fork-monitor.vala ../subprojects/frida-core/lib/payload/spawn-monitor.vala ../subprojects/frida-core/lib/payload/thread-suspend-monitor.vala ../subprojects/frida-core/lib/payload/unwind-sitter.vala ../subprojects/frida-core/lib/payload/exit-monitor.vala ../subprojects/frida-core/lib/payload/cloak.vala ../subprojects/frida-core/lib/payload/fd-guard.vala ../subprojects/frida-core/lib/payload/fdt-padder.vala subprojects/frida-core/lib/base/frida-base-1.0.vapi subprojects/efni/src/efni-1.0.vapi
+[34/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/gumelfmodule.c.o
+[35/436] Generating subprojects/frida-core/src/barebone/frida-barebone-script-runtime with a custom command
+[36/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/gumheapapi.c.o
+[37/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/gumdarwingrafter.c.o
+[38/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/guminvocationcontext.c.o
+[39/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/guminvocationlistener.c.o
+[40/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/gumkernel.c.o
+[41/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/gumleb.c.o
+[42/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/gumlibc.c.o
+[43/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/gummemoryaccessmonitor.c.o
+[44/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/gummapper.c.o
+[45/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/gummemorymap.c.o
+[46/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/gummetalarray.c.o
+[47/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/gummoduleapiresolver.c.o
+[48/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/gummetalhash.c.o
+[49/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/gummodulemap.c.o
+[50/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/gumprocessmemory.c.o
+[51/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/gumprocess.c.o
+[52/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/guminterceptor.c.o
+[53/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/gumthreadregistry.c.o
+[54/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/gummodule.c.o
+[55/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/gumprintf.c.o
+[56/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/gummodulefacade.c.o
+[57/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/gummoduleregistry.c.o
+[58/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/gummoduleresolver.c.o
+[59/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/gumnativemoduleresolver.c.o
+[60/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/gumreturnaddress.c.o
+[61/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/gumspinlock.c.o
+[62/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/gumnativeprocessmemory.c.o
+[63/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/gumpemodule.c.o
+[64/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/gumsymbolutil.c.o
+[65/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/gumstalker.c.o
+[66/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/gummachomodule.c.o
+[67/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/arch-x86_gumx86relocator.c.o
+[68/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/arch-x86_gumx86reader.c.o
+[69/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/arch-arm_gumarmrelocator.c.o
+[70/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/arch-arm_gumarmwriter.c.o
+[71/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/gumswiftapiresolver.c.o
+[72/436] Compiling C object subprojects/frida-core/tools/frida-resource-compiler.p/meson-generated_resource-compiler.c.o
+[73/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/arch-arm_gumthumbwriter.c.o
+[74/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/arch-arm_gumarmreg.c.o
+[75/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/arch-x86_gumx86writer.c.o
+[76/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/arch-arm_gumthumbrelocator.c.o
+[77/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/arch-arm64_gumarm64relocator.c.o
+[78/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/arch-mips_gummipswriter.c.o
+[79/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/arch-mips_gummipsrelocator.c.o
+[80/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/arch-arm64_gumarm64writer.c.o
+[81/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/gummemory.c.o
+[82/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/backend-posix_gummemoryaccessmonitor-posix.c.o
+[83/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/backend-darwin_gumobjcdisposeclasspairmonitor.c.o
+[84/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/backend-darwin_gumdarwinbacktracer.c.o
+[85/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/backend-darwin_gumsymbolutil-darwin.c.o
+[86/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/backend-darwin_gumtls-darwin.c.o
+[87/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/backend-darwin_gumobjcapiresolver.c.o
+[88/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/backend-darwin_gumkernel-darwin.c.o
+[89/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/backend-darwin_gumthreadregistry-darwin.c.o
+[90/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/backend-darwin_gummemory-darwin.c.o
+[91/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/backend-darwin_gummodule-darwin.c.o
+[92/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/backend-darwin_gummoduleregistry-darwin.c.o
+[93/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/backend-darwin_gumdarwinsymbolicator.c.o
+[94/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/backend-darwin_gumcodesegment-darwin.c.o
+[95/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/backend-posix_gumexceptor-posix.c.o
+[96/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/backend-darwin_gumunwindbroker-darwin.c.o
+[97/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/gumcmodule.c.o
+[98/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/backend-darwin_gumdarwinmoduleresolver.c.o
+[99/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/backend-darwin_substratedclient.c.o
+[100/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/arch-arm64_gumarm64backtracer.c.o
+[101/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/backend-arm64_gumcpucontext-arm64.c.o
+[102/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/arch-arm64_gumarm64reader.c.o
+[103/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/backend-arm64_gumprocess-arm64.c.o
+[104/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/backend-arm64_guminterceptor-arm64-glue.S.o
+[105/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/backend-arm64_gumstalker-arm64-glue.S.o
+[106/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/backend-arm64_memcpy-advsimd.S.o
+[107/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/.._lib_prot_native_core.c.o
+[108/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/backend-darwin_gumprocess-darwin.c.o
+[109/436] Compiling C object subprojects/frida-gum/libs/gum/prof/libfrida-gum-prof-1.0.a.p/gumcallcountsampler.c.o
+[110/436] Compiling C object subprojects/frida-gum/libs/gum/prof/libfrida-gum-prof-1.0.a.p/gummalloccountsampler.c.o
+[111/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/backend-arm64_guminterceptor-arm64.c.o
+[112/436] Compiling C object subprojects/frida-gum/libs/gum/prof/libfrida-gum-prof-1.0.a.p/gumprofiler.c.o
+[113/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/backend-darwin_gummachomapper.c.o
+[114/436] Compiling C object subprojects/frida-gum/libs/gum/prof/libfrida-gum-prof-1.0.a.p/gumprofilereport.c.o
+[115/436] Compiling C object subprojects/frida-gum/libs/gum/prof/libfrida-gum-prof-1.0.a.p/gumwallclocksampler.c.o
+[116/436] Compiling C object subprojects/frida-gum/libs/gum/prof/libfrida-gum-prof-1.0.a.p/gumsampler.c.o
+[117/436] Compiling C object subprojects/frida-gum/libs/gum/prof/libfrida-gum-prof-1.0.a.p/gumcyclesampler-darwin.c.o
+[118/436] Compiling C object subprojects/frida-gum/libs/gum/prof/libfrida-gum-prof-1.0.a.p/gumbusycyclesampler-darwin.c.o
+[119/436] Compiling C object subprojects/frida-gum/libs/gum/prof/libfrida-gum-prof-1.0.a.p/gumusertimesampler-darwin.c.o
+[120/436] Compiling C object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumscript.c.o
+[121/436] Compiling C object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumjs.c.o
+[122/436] Compiling C object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumscriptscheduler.c.o
+[123/436] Compiling C object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumscriptapi.c.o
+[124/436] Compiling C object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumscriptbackend.c.o
+[125/436] Compiling C object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumansi.c.o
+[126/436] Compiling C object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumffi.c.o
+[127/436] Compiling C object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumscripttask.c.o
+[128/436] Compiling C object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gummemoryvfs.c.o
+[129/436] Compiling C object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/.._.._lib_prot_gumprotaesgcm.c.o
+[130/436] Compiling C object subprojects/frida-gum/gum/libfrida-gum-1.0.a.p/backend-arm64_gumstalker-arm64.c.o
+[131/436] Compiling C object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumsourcemap.c.o
+[132/436] Compiling C object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumquickobject.c.o
+[133/436] Compiling C object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumquickscriptbackend.c.o
+[134/436] Compiling C object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumquickkernel.c.o
+[135/436] Compiling C object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumquickmemory.c.o
+[136/436] Compiling C object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumquickscript.c.o
+[137/436] Compiling C object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumquickvalue.c.o
+[138/436] Compiling C object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumquickthread.c.o
+[139/436] Compiling C object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumquickfile.c.o
+[140/436] Compiling C object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumquickchecksum.c.o
+[141/436] Compiling C object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumquickprocess.c.o
+[142/436] Compiling C object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumquickmodule.c.o
+[143/436] Compiling C object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumquickeventsink.c.o
+[144/436] Compiling C object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumquickapiresolver.c.o
+[145/436] Compiling C object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumquickinterceptor.c.o
+[146/436] Compiling C object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumquickstalker.c.o
+[147/436] Compiling C object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumquicksymbol.c.o
+[148/436] Compiling C object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumquickcmodule.c.o
+[149/436] Generating subprojects/frida-tools/agents/itracer/itracer-agent.js with a custom command
+[150/436] Compiling C object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumquickcontrolflowgraph.c.o
+[151/436] Compiling C object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumquickinstruction.c.o
+[152/436] Generating subprojects/frida-tools/agents/repl/repl-agent.js with a custom command
+[153/436] Compiling C object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumquickcloak.c.o
+[154/436] Compiling C object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumquickprofiler.c.o
+[155/436] Compiling C object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumquickcoderelocator.c.o
+[156/436] Compiling C object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumquicksampler.c.o
+[157/436] Compiling C object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumquickapi.c.o
+[158/436] Compiling C object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumquickstream.c.o
+[159/436] Compiling C object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumquickcodewriter.c.o
+[160/436] Compiling C object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumquicksocket.c.o
+[161/436] Compiling C object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumquickdatabase.c.o
+[162/436] Compiling C object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumquickcore.c.o
+[163/436] Generating subprojects/frida-tools/agents/fs/fs-agent.js with a custom command
+[164/436] Compiling C++ object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumv8object.cpp.o
+[165/436] Compiling C++ object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumv8scriptbackend.cpp.o
+[166/436] Compiling C++ object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumv8scope.cpp.o
+[167/436] Compiling C++ object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumv8kernel.cpp.o
+[168/436] Generating subprojects/frida-tools/agents/tracer/tracer-agent.js with a custom command
+[169/436] Compiling C++ object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumv8memory.cpp.o
+[170/436] Compiling C++ object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumv8value.cpp.o
+[171/436] Compiling C++ object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumv8script.cpp.o
+[172/436] Compiling C++ object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumv8thread.cpp.o
+[173/436] Compiling C++ object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumv8file.cpp.o
+[174/436] Compiling C++ object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumv8process.cpp.o
+[175/436] Compiling C++ object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumv8eventsink.cpp.o
+[176/436] Compiling C++ object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumv8apiresolver.cpp.o
+[177/436] Compiling C++ object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumv8platform.cpp.o
+[178/436] Compiling C++ object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumv8module.cpp.o
+[179/436] Compiling C++ object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumv8checksum.cpp.o
+[180/436] Compiling C++ object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumv8stalker.cpp.o
+[181/436] Compiling C++ object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumv8core.cpp.o
+[182/436] Compiling C++ object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumv8interceptor.cpp.o
+[183/436] Compiling C++ object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumv8symbol.cpp.o
+[184/436] Compiling C++ object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumv8cmodule.cpp.o
+[185/436] Compiling C++ object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumv8controlflowgraph.cpp.o
+[186/436] Compiling C object subprojects/efni/src/libefni-1.0.a.p/meson-generated_error.c.o
+[187/436] Compiling C++ object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumv8instruction.cpp.o
+[188/436] Compiling C++ object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumv8cloak.cpp.o
+[189/436] Compiling C++ object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumv8profiler.cpp.o
+[190/436] Compiling C++ object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumv8api.cpp.o
+[191/436] Compiling C++ object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumv8coderelocator.cpp.o
+[192/436] Compiling C++ object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumv8sampler.cpp.o
+[193/436] Compiling C++ object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumv8stream.cpp.o
+[194/436] Compiling C object subprojects/efni/src/libefni-1.0.a.p/meson-generated_promise.c.o
+[195/436] Compiling C object subprojects/efni/src/libefni-1.0.a.p/meson-generated_socket.c.o
+[196/436] Compiling C object subprojects/efni/src/libefni-1.0.a.p/meson-generated_stream.c.o
+[197/436] Compiling C object subprojects/efni/src/libefni-1.0.a.p/meson-generated_marshal.c.o
+[198/436] Compiling C object subprojects/efni/src/libefni-1.0.a.p/meson-generated_numeric.c.o
+[199/436] Compiling C object subprojects/efni/src/libefni-1.0.a.p/meson-generated_fs.c.o
+[200/436] Compiling C object subprojects/efni/src/libefni-1.0.a.p/meson-generated_value.c.o
+[201/436] Compiling C object subprojects/efni/src/libefni-1.0.a.p/meson-generated_buffer.c.o
+[202/436] Compiling C object subprojects/efni/src/libefni-1.0.a.p/meson-generated_debugger.c.o
+[203/436] Compiling C object subprojects/efni/src/libefni-1.0.a.p/efni-darwin.c.o
+[204/436] Compiling C object subprojects/efni/src/libefni-1.0.a.p/socket-glue.c.o
+[205/436] Compiling C++ object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumv8database.cpp.o
+[206/436] Compiling C++ object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumv8socket.cpp.o
+[207/436] Compiling C object subprojects/efni/src/libefni-1.0.a.p/buffer-glue.c.o
+[208/436] Compiling C object subprojects/frida-core/lib/base/libfrida-base-1.0.a.p/meson-generated_asset-location.c.o
+[209/436] Compiling C object subprojects/efni/src/libefni-1.0.a.p/meson-generated_xpc.c.o
+[210/436] Compiling C object subprojects/frida-core/lib/base/libfrida-base-1.0.a.p/meson-generated_promise.c.o
+[211/436] Compiling C++ object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a.p/gumv8codewriter.cpp.o
+[212/436] Compiling C object subprojects/frida-core/lib/base/libfrida-base-1.0.a.p/meson-generated_service.c.o
+[213/436] Compiling C object subprojects/frida-core/lib/base/libfrida-base-1.0.a.p/meson-generated_dbus.c.o
+[214/436] Compiling C object subprojects/frida-core/lib/base/libfrida-base-1.0.a.p/meson-generated_xnu-syscalls_xnu-syscalls.c.o
+[215/436] Compiling C object subprojects/frida-core/lib/base/libfrida-base-1.0.a.p/meson-generated_channel.c.o
+[216/436] Compiling C object subprojects/frida-core/lib/base/libfrida-base-1.0.a.p/meson-generated_rpc.c.o
+[217/436] Compiling C object subprojects/frida-core/lib/base/libfrida-base-1.0.a.p/session-glue.c.o
+[218/436] Compiling C object subprojects/frida-core/lib/base/libfrida-base-1.0.a.p/meson-generated_corefoundation.c.o
+[219/436] Compiling C object subprojects/frida-core/lib/base/libfrida-base-1.0.a.p/socket-glue.c.o
+[220/436] Compiling C object subprojects/frida-core/lib/base/libfrida-base-1.0.a.p/xnu-syscalls_xnu-syscalls-glue.c.o
+[221/436] Compiling C object subprojects/frida-core/lib/pipe/libfrida-pipe.a.p/meson-generated_pipe.c.o
+[222/436] Compiling C object subprojects/frida-core/lib/base/libfrida-base-1.0.a.p/meson-generated_posix.c.o
+[223/436] Compiling C object subprojects/frida-core/lib/base/libfrida-base-1.0.a.p/p2p-glue.c.o
+[224/436] Compiling C object subprojects/frida-core/lib/pipe/libfrida-pipe.a.p/pipe-darwin.c.o
+[225/436] Compiling C object subprojects/frida-core/lib/payload/libfrida-payload-1.0.a.p/meson-generated_process.c.o
+[226/436] Compiling C object subprojects/frida-core/lib/base/libfrida-base-1.0.a.p/meson-generated_p2p.c.o
+[227/436] Compiling C object subprojects/frida-core/lib/payload/libfrida-payload-1.0.a.p/meson-generated_fork-monitor.c.o
+[228/436] Compiling C object subprojects/frida-core/lib/payload/libfrida-payload-1.0.a.p/meson-generated_spawn-monitor.c.o
+[229/436] Compiling C object subprojects/frida-core/lib/payload/libfrida-payload-1.0.a.p/meson-generated_exit-monitor.c.o
+[230/436] Compiling C object subprojects/frida-core/lib/payload/libfrida-payload-1.0.a.p/meson-generated_unwind-sitter.c.o
+[231/436] Compiling C object subprojects/frida-core/lib/payload/libfrida-payload-1.0.a.p/meson-generated_thread-suspend-monitor.c.o
+[232/436] Compiling C object subprojects/frida-core/lib/payload/libfrida-payload-1.0.a.p/meson-generated_portal-client.c.o
+[233/436] Compiling C object subprojects/frida-core/lib/payload/libfrida-payload-1.0.a.p/meson-generated_cloak.c.o
+[234/436] Compiling C object subprojects/frida-core/lib/payload/libfrida-payload-1.0.a.p/meson-generated_script-engine.c.o
+[235/436] Compiling C object subprojects/frida-core/lib/payload/libfrida-payload-1.0.a.p/meson-generated_fd-guard.c.o
+[236/436] Compiling C object subprojects/frida-core/lib/payload/libfrida-payload-1.0.a.p/meson-generated_base-agent-session.c.o
+[237/436] Compiling C object subprojects/frida-core/lib/base/libfrida-base-1.0.a.p/meson-generated_socket.c.o
+[238/436] Compiling C object subprojects/frida-core/lib/payload/libfrida-payload-1.0.a.p/spawn-monitor-glue.c.o
+[239/436] Compiling C object subprojects/frida-core/lib/payload/libfrida-payload-1.0.a.p/process-glue.c.o
+[240/436] Compiling C object subprojects/frida-core/lib/payload/libfrida-payload-1.0.a.p/meson-generated_fdt-padder.c.o
+[241/436] Linking static target subprojects/frida-gum/gum/libfrida-gum-1.0.a
+[242/436] Linking static target subprojects/frida-gum/libs/gum/prof/libfrida-gum-prof-1.0.a
+[243/436] Linking static target subprojects/frida-core/lib/pipe/libfrida-pipe.a
+[244/436] Compiling C object subprojects/frida-core/lib/payload/libfrida-payload-1.0.a.p/thread-suspend-monitor-glue.c.o
+[245/436] Linking static target subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-1.0.a
+[246/436] Compiling C object subprojects/frida-core/lib/payload/libfrida-payload-1.0.a.p/libc-shim.c.o
+[247/436] Linking target subprojects/frida-core/tools/frida-resource-compiler
+ld: warning: ignoring duplicate libraries: '-lresolv'
+[248/436] Compiling C object subprojects/frida-gum/libs/gum/heap/libfrida-gum-heap-1.0.a.p/gumallocationblock.c.o
+[249/436] Compiling C object subprojects/frida-gum/libs/gum/heap/libfrida-gum-heap-1.0.a.p/gumallocationgroup.c.o
+[250/436] Compiling C object subprojects/frida-core/lib/payload/libfrida-payload-1.0.a.p/unwind-sitter-glue.c.o
+[251/436] Linking static target subprojects/frida-core/lib/payload/libfrida-payload-1.0.a
+[252/436] Compiling Vala source ../subprojects/frida-core/lib/netif/tunnel-interface-observer.vala subprojects/frida-core/lib/base/frida-base-1.0.vapi subprojects/efni/src/efni-1.0.vapi
+[253/436] Compiling C object subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-inspector-1.0.a.p/guminspectorserver.c.o
+[254/436] Compiling Vala source ../subprojects/frida-core/lib/agent/agent.vala subprojects/frida-core/lib/base/frida-base-1.0.vapi subprojects/efni/src/efni-1.0.vapi subprojects/frida-core/lib/pipe/frida-pipe.vapi subprojects/frida-core/lib/payload/frida-payload-1.0.vapi
+[255/436] Compiling Vala source ../subprojects/frida-core/src/darwin/frida-helper-types.vala ../subprojects/frida-core/src/darwin/policy-softener.vala ../subprojects/frida-core/src/darwin/frida-helper-backend.vala subprojects/frida-core/lib/base/frida-base-1.0.vapi subprojects/efni/src/efni-1.0.vapi subprojects/frida-core/lib/pipe/frida-pipe.vapi
+../subprojects/frida-core/src/darwin/frida-helper-backend.vala:331:6-331:25: warning: unreachable catch clause detected
+  331 | 			} catch (Efni.Error e) {
+      | 			  ^~~~~~~~~~~~~~~~~~~~  
+../subprojects/frida-core/src/darwin/frida-helper-backend.vala:344:6-344:25: warning: unreachable catch clause detected
+  344 | 			} catch (Efni.Error e) {
+      | 			  ^~~~~~~~~~~~~~~~~~~~  
+../subprojects/frida-core/src/darwin/frida-helper-backend.vala:610:6-610:25: warning: unreachable catch clause detected
+  610 | 			} catch (Efni.Error e) {
+      | 			  ^~~~~~~~~~~~~~~~~~~~  
+../subprojects/frida-core/src/darwin/frida-helper-backend.vala:744:7-744:26: warning: unreachable catch clause detected
+  744 | 				} catch (Efni.Error e) {
+      | 				  ^~~~~~~~~~~~~~~~~~~~  
+Compilation succeeded - 4 warning(s)
+[256/436] Compiling C object subprojects/frida-core/lib/netif/libfrida-netif.a.p/meson-generated_tunnel-interface-observer.c.o
+[257/436] Compiling C object subprojects/frida-core/lib/agent/libfrida-agent-raw.dylib.p/agent-glue.c.o
+[258/436] Compiling C++ object subprojects/frida-core/lib/agent/libfrida-agent-raw.dylib.p/dummy.cpp.o
+[259/436] Generating subprojects/frida-core/src/barebone/frida-data-barebone with a custom command
+[260/436] Generating subprojects/frida-core/src/frida-data-simmy with a custom command
+[261/436] Generating subprojects/frida-core/src/frida-data-icons with a custom command
+[262/436] Generating subprojects/frida-core/src/frida-data-darwin with a custom command
+[263/436] Generating subprojects/frida-core/src/frida-data-android with a custom command
+[264/436] Compiling C object subprojects/frida-core/src/libfrida-helper-backend.a.p/darwin_policyd-client.c.o
+[265/436] Compiling C object subprojects/frida-core/src/libfrida-helper-backend.a.p/darwin_policyd.c.o
+[266/436] Compiling C object subprojects/efni/src/libefni-1.0.a.p/meson-generated_gdb.c.o
+[267/436] Compiling C object subprojects/frida-core/src/libfrida-helper-backend.a.p/meson-generated_darwin_policy-softener.c.o
+[268/436] Linking static target subprojects/efni/src/libefni-1.0.a
+[269/436] Linking static target subprojects/frida-core/lib/netif/libfrida-netif.a
+[270/436] Compiling C object subprojects/frida-core/src/libfrida-helper-backend.a.p/darwin_policy-softener-glue.c.o
+[271/436] Compiling C object subprojects/frida-gum/libs/gum/heap/libfrida-gum-heap-1.0.a.p/gumallocationtracker.c.o
+[272/436] Compiling Vala source ../subprojects/frida-core/src/darwin/frida-helper-service.vala subprojects/frida-core/src/frida-helper-backend.vapi subprojects/frida-core/lib/base/frida-base-1.0.vapi subprojects/efni/src/efni-1.0.vapi subprojects/frida-core/lib/pipe/frida-pipe.vapi
+[273/436] Compiling C object subprojects/frida-gum/libs/gum/heap/libfrida-gum-heap-1.0.a.p/gumallocatorprobe.c.o
+[274/436] Compiling C object subprojects/frida-gum/libs/gum/heap/libfrida-gum-heap-1.0.a.p/gumboundschecker.c.o
+[275/436] Compiling C object subprojects/frida-core/lib/agent/libfrida-agent-raw.dylib.p/meson-generated_agent.c.o
+[276/436] Compiling Objective-C object subprojects/frida-core/src/frida-helper-raw.p/darwin_frida-helper-service-glue.m.o
+[277/436] Compiling C object subprojects/frida-gum/libs/gum/heap/libfrida-gum-heap-1.0.a.p/gumcobject.c.o
+[278/436] Compiling Vala source ../subprojects/idun/src/device-monitor.vala ../subprojects/idun/src/lockdown.vala ../subprojects/idun/src/installation-proxy.vala ../subprojects/idun/src/springboard-services.vala ../subprojects/idun/src/notification-proxy.vala ../subprojects/idun/src/pasteboard.vala ../subprojects/idun/src/screen-capture.vala ../subprojects/idun/src/display-stream.vala ../subprojects/idun/src/hid.vala ../subprojects/idun/src/core-device-info.vala ../subprojects/idun/src/instruments-device-info.vala ../subprojects/idun/src/instruments-application-listing.vala ../subprojects/idun/src/instruments-process-control.vala ../subprojects/idun/src/instruments-core-profile.vala ../subprojects/idun/src/lldb.vala ../subprojects/idun/src/discovery-service.vala ../subprojects/idun/src/app-service.vala ../subprojects/idun/src/trusted-service.vala ../subprojects/idun/src/plist-service.vala ../subprojects/idun/src/plist.vala ../subprojects/idun/src/transport/channel-provider.vala ../subprojects/idun/src/transport/xpc-connection.vala ../subprojects/idun/src/transport/dtx-connection.vala ../subprojects/idun/src/transport/network-stack.vala ../subprojects/idun/src/transport/usbmux.vala ../subprojects/idun/src/transport/dns.vala ../subprojects/idun/src/codec/xpc.vala ../subprojects/idun/src/codec/dtx.vala ../subprojects/idun/src/codec/keyed-archive.vala ../subprojects/idun/src/codec/opack.vala ../subprojects/idun/src/codec/courier-packed.vala ../subprojects/idun/src/codec/cs-signature.vala ../subprojects/idun/src/codec/kcdata.vala ../subprojects/idun/src/codec/kdebug.vala ../subprojects/idun/src/codec/kperfdata.vala ../subprojects/idun/src/codec/debugger-mappings.vala ../subprojects/idun/src/transport/device-monitor-macos.vala subprojects/efni/src/efni-1.0.vapi
+../subprojects/idun/src/codec/xpc.vala:151:36-151:66: warning: `GLib.Type.class_ref' has been deprecated since 2.84
+  151 | 			FlagsClass klass = (FlagsClass) typeof (MessageFlags).class_ref ();
+      | 			                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    
+../subprojects/idun/src/codec/xpc.vala:84:47-84:76: warning: `GLib.Type.class_ref' has been deprecated since 2.84
+   84 | 			EnumClass message_type_class = (EnumClass) typeof (MessageType).class_ref ();
+      | 			                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    
+../subprojects/idun/src/codec/xpc.vala:409:41-409:69: warning: `GLib.Type.class_ref' has been deprecated since 2.84
+  409 | 			this.object_type_class = (EnumClass) typeof (ObjectType).class_ref ();
+      | 			                                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~    
+Compilation succeeded - 3 warning(s)
+[279/436] Linking static target subprojects/frida-gum/bindings/gumjs/libfrida-gumjs-inspector-1.0.a
+[280/436] Compiling C object subprojects/frida-gum/libs/gum/heap/libfrida-gum-heap-1.0.a.p/gumcobjecttracker.c.o
+[281/436] Compiling C object subprojects/frida-gum/libs/gum/heap/libfrida-gum-heap-1.0.a.p/guminstancetracker.c.o
+[282/436] Compiling C object subprojects/frida-gum/libs/gum/heap/libfrida-gum-heap-1.0.a.p/gumpagepool.c.o
+[283/436] Compiling C object subprojects/frida-gum/libs/gum/heap/libfrida-gum-heap-1.0.a.p/gumsanitychecker.c.o
+[284/436] Compiling C object subprojects/frida-core/src/libfrida-helper-backend.a.p/meson-generated_darwin_frida-helper-types.c.o
+[285/436] Compiling C object subprojects/idun/src/libidun-1.0.a.p/meson-generated_notification-proxy.c.o
+[286/436] Compiling C object subprojects/idun/src/libidun-1.0.a.p/meson-generated_springboard-services.c.o
+[287/436] Compiling C object subprojects/idun/src/libidun-1.0.a.p/meson-generated_screen-capture.c.o
+[288/436] Compiling C object subprojects/idun/src/libidun-1.0.a.p/meson-generated_installation-proxy.c.o
+[289/436] Compiling C object subprojects/idun/src/libidun-1.0.a.p/meson-generated_pasteboard.c.o
+[290/436] Compiling C object subprojects/idun/src/libidun-1.0.a.p/meson-generated_lockdown.c.o
+[291/436] Compiling Objective-C object subprojects/frida-core/src/libfrida-helper-backend.a.p/darwin_frida-helper-backend-glue.m.o
+[292/436] Compiling C object subprojects/frida-core/src/libfrida-helper-backend.a.p/meson-generated_darwin_frida-helper-backend.c.o
+[293/436] Linking static target subprojects/frida-core/src/libfrida-helper-backend.a
+[294/436] Compiling C object subprojects/frida-core/src/frida-helper-raw.p/meson-generated_darwin_frida-helper-service.c.o
+[295/436] Compiling C object subprojects/idun/src/libidun-1.0.a.p/meson-generated_hid.c.o
+[296/436] Compiling C object subprojects/idun/src/libidun-1.0.a.p/meson-generated_core-device-info.c.o
+[297/436] Compiling C object subprojects/idun/src/libidun-1.0.a.p/meson-generated_instruments-device-info.c.o
+[298/436] Compiling C object subprojects/frida-core/lib/base/libfrida-base-1.0.a.p/meson-generated_session.c.o
+[299/436] Linking static target subprojects/frida-core/lib/base/libfrida-base-1.0.a
+[300/436] Compiling C object subprojects/idun/src/libidun-1.0.a.p/meson-generated_display-stream.c.o
+[301/436] Compiling C object subprojects/idun/src/libidun-1.0.a.p/meson-generated_instruments-process-control.c.o
+[302/436] Compiling C object subprojects/idun/src/libidun-1.0.a.p/meson-generated_instruments-application-listing.c.o
+[303/436] Compiling C object subprojects/idun/src/libidun-1.0.a.p/meson-generated_discovery-service.c.o
+[304/436] Compiling C object subprojects/idun/src/libidun-1.0.a.p/meson-generated_instruments-core-profile.c.o
+[305/436] Compiling C object subprojects/idun/src/libidun-1.0.a.p/meson-generated_trusted-service.c.o
+[306/436] Linking target subprojects/frida-core/src/frida-helper-raw
+ld: warning: ignoring duplicate libraries: '-lresolv'
+[307/436] Compiling C object subprojects/idun/src/libidun-1.0.a.p/meson-generated_device-monitor.c.o
+[308/436] Generating subprojects/frida-core/src/frida-helper with a custom command
+[309/436] Linking target subprojects/frida-core/lib/agent/libfrida-agent-raw.dylib
+ld: warning: ignoring duplicate libraries: '-lresolv'
+[310/436] Compiling C object subprojects/idun/src/libidun-1.0.a.p/meson-generated_plist-service.c.o
+[311/436] Compiling C object subprojects/idun/src/libidun-1.0.a.p/meson-generated_transport_channel-provider.c.o
+[312/436] Compiling C object subprojects/idun/src/libidun-1.0.a.p/meson-generated_app-service.c.o
+[313/436] Compiling C object subprojects/idun/src/libidun-1.0.a.p/meson-generated_transport_network-stack.c.o
+[314/436] Compiling C object subprojects/idun/src/libidun-1.0.a.p/meson-generated_transport_dns.c.o
+[315/436] Compiling C object subprojects/idun/src/libidun-1.0.a.p/meson-generated_transport_xpc-connection.c.o
+[316/436] Compiling C object subprojects/idun/src/libidun-1.0.a.p/meson-generated_codec_dtx.c.o
+[317/436] Compiling C object subprojects/idun/src/libidun-1.0.a.p/meson-generated_lldb.c.o
+[318/436] Compiling C object subprojects/idun/src/libidun-1.0.a.p/meson-generated_transport_dtx-connection.c.o
+[319/436] Compiling C object subprojects/idun/src/libidun-1.0.a.p/meson-generated_transport_usbmux.c.o
+[320/436] Compiling C object subprojects/idun/src/libidun-1.0.a.p/meson-generated_codec_opack.c.o
+[321/436] Compiling C object subprojects/idun/src/libidun-1.0.a.p/meson-generated_codec_xpc.c.o
+[322/436] Compiling C object subprojects/idun/src/libidun-1.0.a.p/meson-generated_codec_courier-packed.c.o
+[323/436] Compiling C object subprojects/idun/src/libidun-1.0.a.p/meson-generated_codec_kdebug.c.o
+[324/436] Compiling C object subprojects/idun/src/libidun-1.0.a.p/meson-generated_plist.c.o
+[325/436] Linking static target subprojects/frida-gum/libs/gum/heap/libfrida-gum-heap-1.0.a
+[326/436] Compiling C object subprojects/idun/src/libidun-1.0.a.p/meson-generated_codec_kcdata.c.o
+[327/436] Compiling C object subprojects/frida-gum/tools/gum-graft.p/gumgraft.c.o
+[328/436] Linking target subprojects/frida-gum/tools/gum-graft
+ld: warning: ignoring duplicate libraries: '-lresolv'
+[329/436] Compiling Objective-C object subprojects/idun/src/libidun-1.0.a.p/transport_device-monitor-darwin.m.o
+[330/436] Compiling C object subprojects/idun/src/libidun-1.0.a.p/meson-generated_codec_debugger-mappings.c.o
+[331/436] Compiling C object subprojects/idun/src/libidun-1.0.a.p/meson-generated_codec_cs-signature.c.o
+[332/436] Compiling C object subprojects/idun/src/libidun-1.0.a.p/meson-generated_codec_kperfdata.c.o
+[333/436] Compiling C object subprojects/idun/src/libidun-1.0.a.p/meson-generated_codec_keyed-archive.c.o
+[334/436] Generating subprojects/frida-core/lib/agent/frida-agent-modulated with a custom command
+[335/436] Compiling C object subprojects/idun/src/libidun-1.0.a.p/meson-generated_transport_device-monitor-macos.c.o
+[336/436] Generating subprojects/frida-core/lib/agent/frida-agent with a custom command
+[337/436] Compiling Objective-C object subprojects/idun/src/libidun-1.0.a.p/transport_icon-helpers-darwin.m.o
+[338/436] Linking static target subprojects/idun/src/libidun-1.0.a
+[339/436] Generating subprojects/frida-tools/bridges/bridges.bundle with a custom command
+[340/436] Generating subprojects/frida-tools/apps/tracer/tracer-app with a custom command
+[341/436] Generating subprojects/frida-core/compat/arch-support with a custom command
+[342/436] Generating subprojects/frida-core/src/frida-data-helper-process with a custom command
+[343/436] Generating subprojects/frida-core/src/frida-data-agent with a custom command
+[344/436] Compiling Vala source subprojects/frida-core/src/frida-data-android.vapi subprojects/frida-core/src/frida-data-darwin.vapi subprojects/frida-core/src/frida-data-helper-process.vapi subprojects/frida-core/src/frida-data-agent.vapi subprojects/frida-core/src/frida-data-simmy.vapi subprojects/frida-core/src/barebone/frida-data-barebone.vapi subprojects/frida-core/src/frida-data-icons.vapi ../subprojects/frida-core/src/frida.vala ../subprojects/frida-core/src/linux-kernel-image.vala ../subprojects/frida-core/src/xnu-kernelcache.vala ../subprojects/frida-core/src/package-manager.vala ../subprojects/frida-core/src/control-service.vala ../subprojects/frida-core/src/portal-service.vala ../subprojects/frida-core/src/host-session-service.vala ../subprojects/frida-core/src/agent-container.vala ../subprojects/frida-core/src/adb.vala ../subprojects/frida-core/src/system.vala ../subprojects/frida-core/src/file-monitor.vala ../subprojects/frida-core/src/async-task.vala ../subprojects/frida-core/src/android-helper/client.vala ../subprojects/frida-core/src/darwin/darwin-host-session.vala ../subprojects/frida-core/src/darwin/fruitjector.vala ../subprojects/frida-core/src/darwin/frida-helper-process.vala ../subprojects/frida-core/src/simmy/simmy-host-session.vala ../subprojects/frida-core/src/simmy/text-plist.vala ../subprojects/frida-core/src/fruity/fruity-host-session.vala ../subprojects/frida-core/src/fruity/injector.vala ../subprojects/frida-core/src/droidy/droidy-host-session.vala ../subprojects/frida-core/src/droidy/jdwp.vala ../subprojects/frida-core/src/droidy/injector.vala ../subprojects/frida-core/src/droidy/axml.vala ../subprojects/frida-core/src/socket/socket-host-session.vala ../subprojects/frida-core/src/barebone/barebone-host-session.vala ../subprojects/frida-core/src/barebone/agent-connection.vala ../subprojects/frida-core/src/barebone/script.vala ../subprojects/frida-core/src/barebone/machine.vala ../subprojects/frida-core/src/barebone/allocator.vala ../subprojects/frida-core/src/barebone/callback.vala ../subprojects/frida-core/src/barebone/memory-scanner.vala ../subprojects/frida-core/src/barebone/interceptor.vala ../subprojects/frida-core/src/barebone/c-module.vala ../subprojects/frida-core/src/barebone/rust-module.vala ../subprojects/frida-core/src/barebone/console.vala ../subprojects/frida-core/src/barebone/layout.vala ../subprojects/frida-core/src/barebone/elf.vala ../subprojects/frida-core/src/barebone/img4.vala ../subprojects/frida-core/src/barebone/lzfse.vala ../subprojects/frida-core/src/barebone/qmp-client.vala ../subprojects/frida-core/src/barebone/kernel-relocation.vala ../subprojects/frida-core/src/barebone/kernel-flavor.vala ../subprojects/frida-core/src/barebone/pe.vala ../subprojects/frida-core/src/barebone/linux.vala ../subprojects/frida-core/src/barebone/win9x.vala ../subprojects/frida-core/src/barebone/xnu.vala ../subprojects/frida-core/src/barebone/win9x-service-names.vala ../subprojects/frida-core/src/barebone/winnt.vala ../subprojects/frida-core/src/barebone/x86-paging.vala ../subprojects/frida-core/src/barebone/x86-inline-hook.vala ../subprojects/frida-core/src/barebone/vz-stub.vala ../subprojects/frida-core/src/barebone/parallels-stub.vala ../subprojects/frida-core/src/barebone/virtualbox-stub.vala ../subprojects/frida-core/src/barebone/virtualbox-console.vala ../subprojects/frida-core/src/barebone/virtualbox-debugger.vala ../subprojects/frida-core/src/barebone/android-emulator-stub.vala ../subprojects/frida-core/src/barebone/arch-x86/machine.vala ../subprojects/frida-core/src/barebone/arch-x86_64/machine.vala ../subprojects/frida-core/src/barebone/arch-arm/machine.vala ../subprojects/frida-core/src/barebone/arch-arm64/machine.vala ../subprojects/frida-core/src/barebone/arch-unknown/machine.vala ../subprojects/frida-core/src/barebone/vz-physical-memory.vala ../subprojects/frida-core/src/barebone/emulator-instrumentation.vala ../subprojects/frida-core/src/compiler/compiler.vala subprojects/frida-core/src/frida-helper-backend.vapi subprojects/idun/src/idun-1.0.vapi subprojects/efni/src/efni-1.0.vapi subprojects/frida-core/lib/base/frida-base-1.0.vapi subprojects/frida-core/lib/netif/frida-netif.vapi subprojects/frida-core/lib/pipe/frida-pipe.vapi
+../subprojects/frida-core/src/simmy/simmy-host-session.vala:283:7-283:26: warning: unreachable catch clause detected
+  283 | 				} catch (Efni.Error e) {
+      | 				  ^~~~~~~~~~~~~~~~~~~~  
+Compilation succeeded - 1 warning(s)
+[345/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_.._frida-data-darwin-blob.S.o
+[346/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_.._barebone_frida-data-barebone-blob.S.o
+[347/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_.._frida-data-android-blob.S.o
+[348/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_.._frida-data-simmy-blob.S.o
+[349/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_.._frida-data-helper-process-blob.S.o
+[350/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_.._frida-data-helper-process.c.o
+[351/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_.._frida-data-agent-blob.S.o
+[352/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_.._frida-data-android.c.o
+[353/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_.._frida-data-simmy.c.o
+[354/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_.._frida-data-agent.c.o
+[355/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_.._barebone_frida-data-barebone.c.o
+[356/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_.._frida-data-icons-blob.S.o
+[357/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_.._frida-data-darwin.c.o
+[358/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_.._frida-data-icons.c.o
+[359/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_xnu-kernelcache.c.o
+[360/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_file-monitor.c.o
+[361/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_agent-container.c.o
+[362/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_async-task.c.o
+[363/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_system.c.o
+[364/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_darwin_fruitjector.c.o
+[365/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_linux-kernel-image.c.o
+[366/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_darwin_darwin-host-session.c.o
+[367/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_simmy_text-plist.c.o
+[368/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_android-helper_client.c.o
+[369/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_darwin_frida-helper-process.c.o
+[370/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_adb.c.o
+[371/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_control-service.c.o
+[372/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_simmy_simmy-host-session.c.o
+[373/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_droidy_axml.c.o
+[374/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_portal-service.c.o
+[375/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_droidy_injector.c.o
+[376/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_host-session-service.c.o
+[377/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_socket_socket-host-session.c.o
+[378/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_barebone_machine.c.o
+[379/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_droidy_droidy-host-session.c.o
+[380/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_barebone_callback.c.o
+[381/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_fruity_injector.c.o
+[382/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_barebone_allocator.c.o
+[383/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_barebone_memory-scanner.c.o
+[384/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_barebone_c-module.c.o
+[385/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_barebone_console.c.o
+[386/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_barebone_interceptor.c.o
+[387/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_barebone_layout.c.o
+[388/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_package-manager.c.o
+[389/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_barebone_rust-module.c.o
+[390/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_barebone_elf.c.o
+[391/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_droidy_jdwp.c.o
+[392/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_barebone_img4.c.o
+[393/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_barebone_lzfse.c.o
+[394/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_barebone_barebone-host-session.c.o
+[395/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_barebone_agent-connection.c.o
+[396/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_barebone_script.c.o
+[397/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_barebone_kernel-relocation.c.o
+[398/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_barebone_pe.c.o
+[399/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_barebone_linux.c.o
+[400/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_barebone_win9x-service-names.c.o
+[401/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_barebone_qmp-client.c.o
+[402/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_barebone_xnu.c.o
+[403/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_barebone_kernel-flavor.c.o
+[404/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_barebone_win9x.c.o
+[405/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_fruity_fruity-host-session.c.o
+[406/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_barebone_x86-inline-hook.c.o
+[407/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_barebone_parallels-stub.c.o
+[408/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_barebone_virtualbox-stub.c.o
+[409/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_barebone_vz-stub.c.o
+[410/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_barebone_winnt.c.o
+[411/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_barebone_android-emulator-stub.c.o
+[412/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_barebone_virtualbox-console.c.o
+subprojects/frida-core/src/libfrida-core.a.p/barebone/virtualbox-console.c:853:45: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+  853 |                                       const const gchar* needle);
+      |                                             ^
+virtualbox-console.c:5510:36: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ 5510 |                              const const gchar* needle)
+      |                                    ^
+2 warnings generated.
+[413/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_barebone_virtualbox-debugger.c.o
+subprojects/frida-core/src/libfrida-core.a.p/barebone/virtualbox-debugger.c:829:45: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+  829 |                                       const const gchar* needle);
+      |                                             ^
+virtualbox-debugger.c:1758:36: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+ 1758 |                              const const gchar* needle)
+      |                                    ^
+2 warnings generated.
+[414/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_barebone_arch-x86_machine.c.o
+[415/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_barebone_x86-paging.c.o
+[416/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_barebone_arch-x86_64_machine.c.o
+[417/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_barebone_arch-unknown_machine.c.o
+[418/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_frida.c.o
+[419/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/compiler_backend-glue.c.o
+[420/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_barebone_vz-physical-memory.c.o
+[421/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_barebone_emulator-instrumentation.c.o
+[422/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/frida-glue.c.o
+[423/436] Compiling Objective-C object subprojects/frida-core/src/libfrida-core.a.p/simmy_simmy-host-session-glue.m.o
+[424/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_barebone_arch-arm_machine.c.o
+[425/436] Compiling Objective-C object subprojects/frida-core/src/libfrida-core.a.p/darwin_darwin-host-session-glue.m.o
+[426/436] Compiling Objective-C object subprojects/frida-core/src/libfrida-core.a.p/darwin_icon-helpers.m.o
+[427/436] Compiling Objective-C object subprojects/frida-core/src/libfrida-core.a.p/darwin_system-darwin.m.o
+[428/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_compiler_compiler.c.o
+[429/436] Compiling C object subprojects/frida-core/src/libfrida-core.a.p/meson-generated_barebone_arch-arm64_machine.c.o
+[430/436] Linking static target subprojects/frida-core/src/libfrida-core.a
+[431/436] Generating subprojects/frida-core/src/api/frida-core-library with a custom command
+libtool: warning: 'libfrida-base-1.0.a(session-glue.c.o)' has no symbols
+libtool: warning: 'libfrida-helper-backend.a(darwin_policy-softener-glue.c.o)' has no symbols
+[432/436] Generating subprojects/frida-core/src/api/frida-core-api with a custom command
+[433/436] Generating subprojects/frida-core/src/api/frida-core-vapi-stamp with a custom command
+[434/436] Generating subprojects/frida-python/frida/binding-code with a custom command (wrapped by meson to set env)
+[435/436] Compiling C object subprojects/frida-python/frida/_frida.abi3.so.p/meson-generated_.._extension.c.o
+[436/436] Linking target subprojects/frida-python/frida/_frida.abi3.so
+ld: warning: ignoring duplicate libraries: '-lresolv'
+INFO: autodetecting backend as ninja
+INFO: calculating backend command to run: /Users/ethan/Documents/GitHub/frida/.claude/worktrees/checkpoint-2/deps/toolchain-macos-arm64/bin/ninja
+ninja: no work to do.
+INFO: autodetecting backend as ninja
+INFO: calculating backend command to run: /Users/ethan/Documents/GitHub/frida/.claude/worktrees/checkpoint-2/deps/toolchain-macos-arm64/bin/ninja
+EXIT=0
