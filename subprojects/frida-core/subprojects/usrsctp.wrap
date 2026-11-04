@@ -1,0 +1,8 @@
+[wrap-git]
+url = https://github.com/frida-forks/usrsctp.git
+revision = bfd359be44adc76c55efacce9a2f71ff0a7f8cd4
+depth = 1
+
+[provide]
+dependency_names = usrsctp
+

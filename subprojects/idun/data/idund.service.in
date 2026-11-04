@@ -1,0 +1,7 @@
+[Unit]
+Description=Idun Apple device tunnel daemon
+
+[Service]
+Type=dbus
+BusName=org.freedesktop.Idun1
+ExecStart=@bindir@/idund

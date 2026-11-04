@@ -1,0 +1,6 @@
+usr/lib/*/libefni-1.0.so
+usr/include/efni-1.0/
+usr/lib/*/pkgconfig/efni-1.0.pc
+usr/share/gir-1.0/Efni-1.0.gir
+usr/share/vala/vapi/efni-1.0.vapi
+usr/share/vala/vapi/efni-1.0.deps

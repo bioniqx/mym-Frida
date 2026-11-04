@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageId>GirCore.GObject-2.0</PackageId>
+    <RootNamespace>GObject</RootNamespace>
+    <Description>C# bindings for GObject.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GLib-2.0\GLib-2.0.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="GObject-2.0.Tests" />
+    <InternalsVisibleTo Include="GirTest-0.1.Tests" />
+  </ItemGroup>
+</Project>

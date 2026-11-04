@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">  
+  <PropertyGroup>
+    <RootNamespace>GirLoader</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="StrongInject" Version="1.4.4" />
+    <ProjectReference Include="..\GirModel\GirModel.csproj" />
+  </ItemGroup>
+</Project>

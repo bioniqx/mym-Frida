@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/1 basic" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/11 build subdir" isTestSource="false" packagePrefix="com.mesonbuild" />
+      <sourceFolder url="file://$MODULE_DIR$/3 args" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/4 inner class" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/5 includedirs" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/6 codegen" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/7 linking" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/8 codegen custom target" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

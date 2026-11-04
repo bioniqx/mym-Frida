@@ -1,0 +1,34 @@
+Source: efni
+Section: libs
+Priority: optional
+Maintainer: Ole André Vadla Ravnås <oleavr@frida.re>
+Build-Depends: debhelper-compat (= 13),
+               dh-sequence-gir,
+               git,
+               python3,
+               libglib2.0-dev,
+               libgee-0.8-dev,
+               libjson-glib-dev,
+               libgirepository1.0-dev
+Standards-Version: 4.7.0
+Homepage: https://github.com/frida/efni
+Rules-Requires-Root: no
+
+Package: libefni-1.0-0
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Building blocks for protocol-heavy GLib code
+ Shared library.
+
+Package: libefni-dev
+Architecture: any
+Depends: libefni-1.0-0 (= ${binary:Version}), gir1.2-efni-1.0 (= ${binary:Version}), ${misc:Depends}
+Description: Building blocks for protocol-heavy GLib code - development files
+ Headers, Vala bindings and GIR data.
+
+Package: gir1.2-efni-1.0
+Section: introspection
+Architecture: any
+Depends: ${gir:Depends}, ${misc:Depends}
+Description: Building blocks for protocol-heavy GLib code - introspection data
+ GObject introspection data for libefni.

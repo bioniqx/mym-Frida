@@ -1,0 +1,16 @@
+/*
+ * Copyright (C) 2026 Håvard Sørbø <havard@hsorbo.no>
+ *
+ * Licence: wxWindows Library Licence, Version 3.1
+ */
+
+int gum_module_registry_dependency_function (void);
+
+#ifdef _WIN32
+__declspec (dllexport)
+#endif
+int
+gum_module_registry_dependent_function (void)
+{
+  return gum_module_registry_dependency_function ();
+}
