@@ -7,3 +7,5 @@
 /tools/protect/node_modules/
 /tools/protect/.seed
 /tools/protect/.key
+.DS_Store
+.DS_Store
