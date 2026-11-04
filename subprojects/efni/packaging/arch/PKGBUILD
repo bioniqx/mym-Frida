@@ -1,0 +1,32 @@
+pkgname=efni
+pkgver=1.0.0
+pkgrel=1
+pkgdesc='Building blocks for protocol-heavy GLib code'
+arch=('x86_64' 'aarch64')
+url='https://github.com/frida/efni'
+license=('wxWindows')
+depends=('glib2' 'libgee' 'json-glib')
+makedepends=('git' 'python' 'libgirepository')
+source=("$pkgname::git+$url.git")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd "$pkgname"
+  python3 tools/detect-version.py | tr - .
+}
+
+prepare() {
+  cd "$pkgname"
+  git submodule update --init
+}
+
+build() {
+  cd "$pkgname"
+  ./configure --prefix=/usr --enable-shared --enable-symbols --without-prebuilds=sdk
+  make
+}
+
+package() {
+  cd "$pkgname"
+  DESTDIR="$pkgdir" make install
+}

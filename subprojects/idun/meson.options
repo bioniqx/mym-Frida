@@ -1,0 +1,29 @@
+option('tests',
+  type: 'feature',
+  value: 'auto',
+  description: 'Build tests'
+)
+
+option('daemon',
+  type: 'feature',
+  value: 'auto',
+  description: 'Build idund, the per-user daemon'
+)
+
+option('examples',
+  type: 'feature',
+  value: 'auto',
+  description: 'Build example programs'
+)
+
+option('gstreamer',
+  type: 'feature',
+  value: 'auto',
+  description: 'Build the GStreamer plugin (idunscreensrc)'
+)
+
+option('quickshell',
+  type: 'feature',
+  value: 'auto',
+  description: 'Build the Quickshell/Qt QML module'
+)

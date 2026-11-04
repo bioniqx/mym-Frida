@@ -1,0 +1,13 @@
+<Project>
+  <Import Project="../../properties/GirCore.Tooling.props" />
+  <Import Project="../../properties/GirCore.Logging.props" />
+
+  <PropertyGroup>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <Compile Include="../Shared/Log.cs" Link="Shared/Log.cs" />
+    <Compile Include="../Shared/Element.cs" Link="Shared/Element.cs" />
+  </ItemGroup>
+</Project>

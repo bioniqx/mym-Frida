@@ -1,0 +1,4 @@
+[D-BUS Service]
+Name=org.freedesktop.Idun1
+Exec=@bindir@/idund
+SystemdService=idund.service
