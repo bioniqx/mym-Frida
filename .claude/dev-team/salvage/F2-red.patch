@@ -1,7 +1,0 @@
-diff --git a/subprojects/frida-gum b/subprojects/frida-gum
-index 88b4ef5c..df024653 160000
---- a/subprojects/frida-gum
-+++ b/subprojects/frida-gum
-@@ -1 +1 @@
--Subproject commit 88b4ef5c488538896e9028c0e32e320940ece24c
-+Subproject commit df024653ad63b5e3f8bb55374eefd10e5c074cf1

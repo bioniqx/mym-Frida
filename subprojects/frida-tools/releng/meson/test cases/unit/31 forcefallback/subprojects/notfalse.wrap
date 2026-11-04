@@ -1,5 +1,0 @@
-[wrap-file]
-directory = notfalse
-
-[provide]
-program_names = false

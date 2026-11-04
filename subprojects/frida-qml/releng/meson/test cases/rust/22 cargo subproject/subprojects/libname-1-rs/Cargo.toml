@@ -1,7 +1,0 @@
-[package]
-name = "libname"
-version = "1"
-
-[lib]
-name="libothername"
-path = "lib.rs"

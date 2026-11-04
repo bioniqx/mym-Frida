@@ -1,8 +1,0 @@
-{
-  "agent": {
-    "transport": {
-      "type": "socket",
-      "path": "/tmp/frida-guest.sock"
-    }
-  }
-}

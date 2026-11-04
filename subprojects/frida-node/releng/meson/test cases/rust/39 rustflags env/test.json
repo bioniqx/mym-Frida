@@ -1,9 +1,0 @@
-{
-  "env": {
-    "RUSTFLAGS": "-C force-frame-pointers=yes"
-  },
-  "installed": [
-    {"type": "exe", "file": "usr/bin/rust-program"},
-    {"type": "pdb", "file": "usr/bin/rust-program"}
-  ]
-}

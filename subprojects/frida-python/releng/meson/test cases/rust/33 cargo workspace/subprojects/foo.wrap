@@ -1,5 +1,0 @@
-[wrap-file]
-method=cargo
-
-[provide]
-dependency_names=foo-1-rs

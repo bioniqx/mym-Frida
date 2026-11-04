@@ -1,8 +1,0 @@
-[wrap-git]
-url = https://github.com/frida/efni.git
-revision = 329dd8e94505e95e066251e3d4dfe25d0e55eec3
-depth = 1
-
-[provide]
-dependency_names = efni-1.0
-

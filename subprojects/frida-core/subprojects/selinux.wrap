@@ -1,8 +1,0 @@
-[wrap-git]
-url = https://github.com/frida-forks/selinux.git
-revision = 507985d931eb1f0227218d5d845634e602426c20
-depth = 1
-
-[provide]
-dependency_names = libselinux, libsepol
-

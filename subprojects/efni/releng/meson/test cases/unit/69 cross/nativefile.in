@@ -1,2 +1,0 @@
-[built-in options]
-build.c_args = ['@c_args@']

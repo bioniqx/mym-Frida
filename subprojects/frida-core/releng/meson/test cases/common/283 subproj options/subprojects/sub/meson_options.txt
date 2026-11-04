@@ -1,2 +1,0 @@
-option('bar', type: 'boolean', value: false)
-option('from_toplevel', type: 'boolean', value: false)

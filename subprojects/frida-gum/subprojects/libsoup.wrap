@@ -1,8 +1,0 @@
-[wrap-git]
-url = https://github.com/frida-forks/libsoup.git
-revision = 2537f36926436ef7ac7e2430c25755216ed54ca5
-depth = 1
-
-[provide]
-dependency_names = libsoup-3.0
-

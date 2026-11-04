@@ -1,9 +1,0 @@
-{
-  "matrix": {
-    "options": {
-      "cython_args": [
-        { "val": "--compile-time-env BUILTIN_VALUE=1" }
-      ]
-    }
-  }
-}

@@ -1,2 +1,0 @@
-project('x')
-jello = 'jello'

@@ -1,2 +1,0 @@
-subdir('a')
-subdir('b')

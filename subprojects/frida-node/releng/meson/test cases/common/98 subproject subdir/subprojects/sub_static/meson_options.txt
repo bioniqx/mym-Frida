@@ -1,1 +1,0 @@
-option('bar', type: 'boolean', value: false)

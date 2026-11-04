@@ -1,8 +1,0 @@
-{
-  "matrix": {
-    "options": {
-      "buildtype": [{ "val": "debug" }],
-      "liba:buildtype": [{ "val": "release"   }]
-    }
-  }
-}

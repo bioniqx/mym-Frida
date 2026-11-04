@@ -1,3 +1,0 @@
-const char *c_func(void) {
-    return "Hello, World!";
-}

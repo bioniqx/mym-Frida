@@ -1,7 +1,0 @@
-{
-  "matrix": {
-    "options": {
-      "b_lto":      [{ "val": "true" }]
-    }
-  }
-}

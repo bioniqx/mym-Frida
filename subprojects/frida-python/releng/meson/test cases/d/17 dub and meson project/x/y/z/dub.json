@@ -1,6 +1,0 @@
-{
-	"dependencies": {
-		"dubtestproject:test3": "*"
-	},
-	"name": "dub-respects-project-root-subdir"
-}
