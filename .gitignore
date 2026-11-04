@@ -1,10 +1,1 @@
-/build/
-/deps/
-/releng/__pycache__/
-/tools/protect/node_modules/
-/tools/protect/.seed
-/tools/protect/.key
-.DS_Store
-**/.DS_Store
-/.idea/**
-/.video_agent
+/.idea
